@@ -1,3 +1,3 @@
 <?php
-    echo "HELLO WORLD!!!";
+    echo "Zasto ne kazes da radis, Covece bozei";
 ?>
