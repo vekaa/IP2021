@@ -1,5 +1,5 @@
 <?php
-    echo "IJAOOO</br>";
+    echo "<h2>Tabele</h2></br>";
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +9,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>Tabele</h2>
 	<table border="2" width="80%">
 		<tr>
 			<th colspan="2">Ime i Prezime</th>
@@ -55,7 +54,7 @@
 			<th colspan="2">
 				<table border="2" width="100%">
 					<tr>
-						<td>F1</td>
+						<td>F1 Radi li ovo</td>
 						<td>F2</td>
 						<td>F3</td>
 					</tr>
