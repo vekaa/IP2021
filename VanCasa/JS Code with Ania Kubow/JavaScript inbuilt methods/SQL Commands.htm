@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html class="no-js page-1003 app-4500" lang="en"><head>
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<meta charset="UTF-8">
+<title>SQL Commands</title>
+<link rel="shortcut icon" href="https://static.oracle.com/cdn/apex/20.2.0.00.20/apex_ui/img/favicons/favicon.ico">
+<link rel="icon" sizes="16x16" href="https://static.oracle.com/cdn/apex/20.2.0.00.20/apex_ui/img/favicons/favicon-16x16.png">
+<link rel="icon" sizes="32x32" href="https://static.oracle.com/cdn/apex/20.2.0.00.20/apex_ui/img/favicons/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://static.oracle.com/cdn/apex/20.2.0.00.20/apex_ui/img/favicons/favicon-180x180.png">
+<link rel="stylesheet" href="SQL%20Commands_files/Core.css" type="text/css">
+<link rel="stylesheet" href="SQL%20Commands_files/Theme-Standard.css" type="text/css">
+
+<link rel="stylesheet" href="SQL%20Commands_files/oraclesans-apex.css" type="text/css">
+
+
+<link rel="stylesheet" href="SQL%20Commands_files/Core_002.css" type="text/css">
+<link rel="stylesheet" href="SQL%20Commands_files/Theme-Dark.css" type="text/css">
+
+<link rel="stylesheet" type="text/css" data-name="vs/editor/editor.main" href="SQL%20Commands_files/editor.css"><link rel="stylesheet" href="SQL%20Commands_files/apex_builder.css" type="text/css">
+
+<style type="text/css">
+#htmlTabHolder 
+{
+    overflow: auto; 
+}
+
+#P1003_SQL_COMMAND1_CONTAINER
+{
+    overflow: hidden 
+}
+
+.a-Form-inputContainer
+{
+    height: 100%;
+}
+
+</style>
+
+
+<script type="text/javascript" charset="UTF-8" crossorigin="anonymous">window.apmeum||(window.apmeum = {});apmeum.commonInited||(function(){apmeum.responseStart=Number(new Date);apmeum.appKey='null';apmeum.customerId='7e2e90dc30bda';apmeum.agentId='D0D9F2D8AD693EFEA6C0C646A82307C3E4703E46';apmeum.agentVersionKey='D0D9F2D8AD693EFEA6C0C646A82307C3E4703E46';apmeum.baseCollectorUrl='https://omc-7e2e90dc30bda.eum.omc.ocp.oraclecloud.com/APMaaSCollector/external/collector?';apmeum.commonInited=true;}());</script><script src="SQL%20Commands_files/apmeum.js" async="async" defer="defer" crossorigin="anonymous"></script><script type="text/javascript" charset="UTF-8" crossorigin="anonymous">window.apmeum||(window.apmeum = {});apmeum.dynamicInited||(function(){apmeum.sid='ihCKGZxqOJixL_nI3f-NIg0ru2xn5wTTHLyeuK3Llj3IgmPhTDBp!278230662!1617224637546';apmeum.operationId='B6AAB63FC3B0C7A3D4C538FB1BB62C74DC39734B';apmeum.statusCode='200';apmeum.obs=31;apmeum.typeobs || (apmeum.typeobs={});apmeum.connectionCount=3;apmeum.connectionTimeout=2000;apmeum.rewriteRules=0;apmeum.webapp_tag='';apmeum.dynamicInited=true;}());</script><script>
+var apex_img_dir = "https://static.oracle.com/cdn/apex/20.2.0.00.20/", htmldb_Img_Dir = apex_img_dir;
+</script>
+<script src="SQL%20Commands_files/desktop_all.js"></script>
+<script src="SQL%20Commands_files/wwv_flow.js_messages"></script>
+<script src="SQL%20Commands_files/legacy_pre18.js"></script>
+<script src="SQL%20Commands_files/legacy_18.js"></script>
+<script src="SQL%20Commands_files/builder_all.js"></script>
+ 
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="-1"><meta http-equiv="Cache-Control" content="no-cache">
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="vs/editor/editor.main.nls" src="SQL%20Commands_files/editor.js"></script><style type="text/css" media="screen" class="monaco-colors">.monaco-editor, .monaco-editor-background, .monaco-editor .inputarea.ime-input { background-color: #1e1e1e; }
+.monaco-editor, .monaco-editor .inputarea.ime-input { color: #d4d4d4; }
+.monaco-editor .margin { background-color: #1e1e1e; }
+.monaco-editor .rangeHighlight { background-color: rgba(255, 255, 255, 0.04); }
+.monaco-editor .symbolHighlight { background-color: rgba(234, 92, 0, 0.33); }
+.vs-whitespace { color: rgba(227, 228, 226, 0.16) !important; }
+.monaco-editor .line-numbers { color: #858585; }
+.monaco-editor .current-line ~ .line-numbers { color: #c6c6c6; }
+.monaco-editor .view-overlays .current-line { border: 2px solid #282828; }
+.monaco-editor .margin-view-overlays .current-line-margin { border: 2px solid #282828; }
+.monaco-editor .lines-content .cigr { box-shadow: 1px 0 0 0 #404040 inset; }
+.monaco-editor .lines-content .cigra { box-shadow: 1px 0 0 0 #707070 inset; }
+.monaco-editor .view-ruler { box-shadow: 1px 0 0 0 #5a5a5a inset; }
+.monaco-editor .cursor { background-color: #aeafad; border-color: #aeafad; color: #515052; }
+.monaco-editor .minimap-slider, .monaco-editor .minimap-slider .minimap-slider-horizontal { background: rgba(121, 121, 121, 0.2); }
+.monaco-editor .minimap-slider:hover, .monaco-editor .minimap-slider:hover .minimap-slider-horizontal { background: rgba(100, 100, 100, 0.35); }
+.monaco-editor .minimap-slider.active, .monaco-editor .minimap-slider.active .minimap-slider-horizontal { background: rgba(191, 191, 191, 0.2); }
+.monaco-editor .minimap-shadow-visible { box-shadow: #000000 -6px 0 6px -6px inset; }
+.monaco-editor .scroll-decoration { box-shadow: #000000 0 6px 6px -6px inset; }
+.monaco-editor .focused .selected-text { background-color: #264f78; }
+.monaco-editor .selected-text { background-color: #3a3d41; }
+.monaco-editor .codelens-decoration { color: #999999; }
+.monaco-editor .codelens-decoration .codicon { color: #999999; }
+.monaco-editor .codelens-decoration > a:hover { color: #4e94ce !important; }
+.monaco-editor .codelens-decoration > a:hover .codicon { color: #4e94ce !important; }
+
+			.monaco-editor .zone-widget .codicon-error,
+			.markers-panel .marker-icon.codicon-error,
+			.extensions-viewlet > .extensions .codicon-error,
+			.monaco-dialog-box .dialog-message-row .codicon-error {
+				color: #f48771;
+			}
+		
+
+			.monaco-editor .zone-widget .codicon-warning,
+			.markers-panel .marker-icon.codicon-warning,
+			.extensions-viewlet > .extensions .codicon-warning,
+			.extension-editor .codicon-warning,
+			.monaco-dialog-box .dialog-message-row .codicon-warning {
+				color: #cca700;
+			}
+		
+
+			.monaco-editor .zone-widget .codicon-info,
+			.markers-panel .marker-icon.codicon-info,
+			.extensions-viewlet > .extensions .codicon-info,
+			.extension-editor .codicon-info,
+			.monaco-dialog-box .dialog-message-row .codicon-info {
+				color: #75beff;
+			}
+		
+.monaco-editor .tokens-inspect-widget { border: 1px solid #454545; }
+.monaco-editor .tokens-inspect-widget .tokens-inspect-separator { background-color: #454545; }
+.monaco-editor .tokens-inspect-widget { background-color: #252526; }
+.monaco-editor .tokens-inspect-widget { color: #cccccc; }
+.monaco-editor .squiggly-error { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23f48771'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left; }
+.monaco-editor .squiggly-warning { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23cca700'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left; }
+.monaco-editor .squiggly-info { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%2375beff'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left; }
+.monaco-editor .squiggly-hint { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%223%22%20width%3D%2212%22%3E%3Cg%20fill%3D%22rgba(238%2C%20238%2C%20238%2C%200.7)%22%3E%3Ccircle%20cx%3D%221%22%20cy%3D%221%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%225%22%20cy%3D%221%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%229%22%20cy%3D%221%22%20r%3D%221%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat bottom left; }
+.monaco-editor.showUnused .squiggly-inline-unnecessary { opacity: 0.667; }
+.monaco-editor .squiggly-inline-deprecated { text-decoration: line-through; text-decoration-color: #d4d4d4}
+.monaco-diff-editor .diff-review-line-number { color: #858585; }
+.monaco-diff-editor .diff-review-shadow { box-shadow: #000000 0 -6px 6px -6px inset; }
+.monaco-editor .line-insert, .monaco-editor .char-insert { background-color: rgba(155, 185, 85, 0.2); }
+.monaco-diff-editor .line-insert, .monaco-diff-editor .char-insert { background-color: rgba(155, 185, 85, 0.2); }
+.monaco-editor .inline-added-margin-view-zone { background-color: rgba(155, 185, 85, 0.2); }
+.monaco-editor .line-delete, .monaco-editor .char-delete { background-color: rgba(255, 0, 0, 0.2); }
+.monaco-diff-editor .line-delete, .monaco-diff-editor .char-delete { background-color: rgba(255, 0, 0, 0.2); }
+.monaco-editor .inline-deleted-margin-view-zone { background-color: rgba(255, 0, 0, 0.2); }
+.monaco-diff-editor.side-by-side .editor.modified { box-shadow: -6px 0 5px -5px #000000; }
+.monaco-editor .bracket-match { background-color: rgba(0, 100, 0, 0.1); }
+.monaco-editor .bracket-match { border: 1px solid #888888; }
+.monaco-editor .monaco-editor-overlaymessage .anchor { border-top-color: #007acc; }
+.monaco-editor .monaco-editor-overlaymessage .message { border: 1px solid #007acc; }
+.monaco-editor .monaco-editor-overlaymessage .message { background-color: #063b49; }
+
+		.monaco-editor .contentWidgets .codicon-lightbulb {
+			color: #ffcc00;
+		}
+
+		.monaco-editor .contentWidgets .codicon-lightbulb-autofix {
+			color: #75beff;
+		}
+.monaco-editor .findOptionsWidget { background-color: #252526; }
+.monaco-editor .findOptionsWidget { color: #cccccc; }
+.monaco-editor .findOptionsWidget { box-shadow: 0 2px 8px #000000; }
+.monaco-editor .findMatch { background-color: rgba(234, 92, 0, 0.33); }
+.monaco-editor .currentFindMatch { background-color: #515c6a; }
+.monaco-editor .findScope { background-color: rgba(58, 61, 65, 0.4); }
+.monaco-editor .find-widget { background-color: #252526; }
+.monaco-editor .find-widget { box-shadow: 0 2px 8px #000000; }
+.monaco-editor .find-widget { color: #cccccc; }
+.monaco-editor .find-widget.no-results .matchesCount { color: #f48771; }
+.monaco-editor .find-widget .monaco-sash { background-color: #454545; width: 3px !important; margin-left: -4px;}
+.monaco-editor .find-widget .monaco-inputbox.synthetic-focus { outline-color: rgba(14, 99, 156, 0.8); }
+.monaco-editor .folded-background { background-color: rgba(38, 79, 120, 0.3); }
+.monaco-editor .reference-zone-widget .ref-tree .referenceMatch .highlight { background-color: rgba(234, 92, 0, 0.3); }
+.monaco-editor .reference-zone-widget .preview .reference-decoration { background-color: rgba(255, 143, 0, 0.6); }
+.monaco-editor .reference-zone-widget .ref-tree { background-color: #252526; }
+.monaco-editor .reference-zone-widget .ref-tree { color: #bbbbbb; }
+.monaco-editor .reference-zone-widget .ref-tree .reference-file { color: #ffffff; }
+.monaco-editor .reference-zone-widget .ref-tree .monaco-list:focus .monaco-list-rows > .monaco-list-row.selected:not(.highlighted) { background-color: rgba(51, 153, 255, 0.2); }
+.monaco-editor .reference-zone-widget .ref-tree .monaco-list:focus .monaco-list-rows > .monaco-list-row.selected:not(.highlighted) { color: #ffffff !important; }
+.monaco-editor .reference-zone-widget .preview .monaco-editor .monaco-editor-background,.monaco-editor .reference-zone-widget .preview .monaco-editor .inputarea.ime-input {	background-color: #001f33;}
+.monaco-editor .reference-zone-widget .preview .monaco-editor .margin {	background-color: #001f33;}
+.monaco-editor .goto-definition-link { color: #4e94ce !important; }
+.monaco-editor .marker-widget a { color: #3794ff; }
+.monaco-editor .marker-widget a.code-link span:hover { color: #3794ff; }
+.monaco-editor-hover .hover-contents a.code-link span:hover { color: #3794ff; }
+.monaco-editor .hoverHighlight { background-color: rgba(38, 79, 120, 0.25); }
+.monaco-editor .monaco-editor-hover { background-color: #252526; }
+.monaco-editor .monaco-editor-hover { border: 1px solid #454545; }
+.monaco-editor .monaco-editor-hover .hover-row:not(:first-child):not(:empty) { border-top: 1px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .monaco-editor-hover hr { border-top: 1px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .monaco-editor-hover hr { border-bottom: 0px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .monaco-editor-hover a { color: #3794ff; }
+.monaco-editor .monaco-editor-hover { color: #cccccc; }
+.monaco-editor .monaco-editor-hover .hover-row .actions { background-color: #2c2c2d; }
+.monaco-editor .monaco-editor-hover code { background-color: rgba(10, 10, 10, 0.4); }
+.monaco-editor.vs .valueSetReplacement { outline: solid 2px #888888; }
+.monaco-editor .detected-link-active { color: #4e94ce !important; }
+.monaco-editor .parameter-hints-widget { border: 1px solid #454545; }
+.monaco-editor .parameter-hints-widget.multiple .body { border-left: 1px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .parameter-hints-widget .signature.has-docs { border-bottom: 1px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .parameter-hints-widget { background-color: #252526; }
+.monaco-editor .parameter-hints-widget a { color: #3794ff; }
+.monaco-editor .parameter-hints-widget { color: #cccccc; }
+.monaco-editor .parameter-hints-widget code { background-color: rgba(10, 10, 10, 0.4); }
+.monaco-editor .snippet-placeholder { background-color: rgba(124, 124, 124, 0.3); outline-color: transparent; }
+.monaco-editor .finish-snippet-placeholder { background-color: transparent; outline-color: #525252; }
+.codicon-symbol-array { color: #cccccc !important; }
+.codicon-symbol-boolean { color: #cccccc !important; }
+.codicon-symbol-class { color: #ee9d28 !important; }
+.codicon-symbol-method { color: #b180d7 !important; }
+.codicon-symbol-color { color: #cccccc !important; }
+.codicon-symbol-constant { color: #cccccc !important; }
+.codicon-symbol-constructor { color: #b180d7 !important; }
+
+			.codicon-symbol-value,.codicon-symbol-enum { color: #ee9d28 !important; }
+.codicon-symbol-enum-member { color: #75beff !important; }
+.codicon-symbol-event { color: #ee9d28 !important; }
+.codicon-symbol-field { color: #75beff !important; }
+.codicon-symbol-file { color: #cccccc !important; }
+.codicon-symbol-folder { color: #cccccc !important; }
+.codicon-symbol-function { color: #b180d7 !important; }
+.codicon-symbol-interface { color: #75beff !important; }
+.codicon-symbol-key { color: #cccccc !important; }
+.codicon-symbol-keyword { color: #cccccc !important; }
+.codicon-symbol-module { color: #cccccc !important; }
+.codicon-symbol-namespace { color: #cccccc !important; }
+.codicon-symbol-null { color: #cccccc !important; }
+.codicon-symbol-number { color: #cccccc !important; }
+.codicon-symbol-object { color: #cccccc !important; }
+.codicon-symbol-operator { color: #cccccc !important; }
+.codicon-symbol-package { color: #cccccc !important; }
+.codicon-symbol-property { color: #cccccc !important; }
+.codicon-symbol-reference { color: #cccccc !important; }
+.codicon-symbol-snippet { color: #cccccc !important; }
+.codicon-symbol-string { color: #cccccc !important; }
+.codicon-symbol-struct { color: #cccccc !important; }
+.codicon-symbol-text { color: #cccccc !important; }
+.codicon-symbol-type-parameter { color: #cccccc !important; }
+.codicon-symbol-unit { color: #cccccc !important; }
+.codicon-symbol-variable { color: #75beff !important; }
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-highlighted-label .highlight { color: #0097fb; }
+.monaco-editor .suggest-widget { color: #d4d4d4; }
+.monaco-editor .suggest-widget a { color: #3794ff; }
+.monaco-editor .suggest-widget code { background-color: rgba(10, 10, 10, 0.4); }
+.monaco-editor .accessibilityHelpWidget { background-color: #252526; }
+.monaco-editor .accessibilityHelpWidget { color: #cccccc; }
+.monaco-editor .accessibilityHelpWidget { box-shadow: 0 2px 8px #000000; }
+.monaco-editor .focused .selectionHighlight { background-color: rgba(173, 214, 255, 0.15); }
+.monaco-editor .selectionHighlight { background-color: rgba(173, 214, 255, 0.07); }
+.monaco-editor .wordHighlight { background-color: rgba(87, 87, 87, 0.72); }
+.monaco-editor .wordHighlightStrong { background-color: rgba(0, 73, 114, 0.72); }
+
+.mtk1 { color: #d4d4d4; }
+.mtk2 { color: #1e1e1e; }
+.mtk3 { color: #cc6666; }
+.mtk4 { color: #259856; }
+.mtk5 { color: #9cdcfe; }
+.mtk6 { color: #ce9178; }
+.mtk7 { color: #b5cea8; }
+.mtk8 { color: #608b4e; }
+.mtk9 { color: #569cd6; }
+.mtk10 { color: #dcdcdc; }
+.mtk11 { color: #808080; }
+.mtk12 { color: #dcdcaa; }
+.mtk13 { color: #f44747; }
+.mtk14 { color: #c586c0; }
+.mtk15 { color: #f14840; }
+.mtk16 { color: #ecbb76; }
+.mtk17 { color: #a79873; }
+.mtk18 { color: #dd6a6f; }
+.mtk19 { color: #5bb498; }
+.mtk20 { color: #909090; }
+.mtk21 { color: #778899; }
+.mtk22 { color: #ff00ff; }
+.mtk23 { color: #a687b3; }
+.mtk24 { color: #b46695; }
+.mtk25 { color: #ff0000; }
+.mtk26 { color: #1e84bf; }
+.mtk27 { color: #4f76ac; }
+.mtk28 { color: #3dc9b0; }
+.mtk29 { color: #74b0df; }
+.mtk30 { color: #4864aa; }
+.mtki { font-style: italic; }
+.mtkb { font-weight: bold; }
+.mtku { text-decoration: underline; text-underline-position: under; }</style><style type="text/css" media="screen">
+		.monaco-editor .codelens-decoration.ee1f61 { height: 21px; line-height: 19px; font-size: 13px; padding-right: 6px;}
+		.monaco-editor .codelens-decoration.ee1f61 > a > .codicon { line-height: 19px; font-size: 13px; }
+		</style><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="vs/basic-languages/sql/sql" src="SQL%20Commands_files/sql.js"></script></head>
+<body class="apex-theme-dark-auto" style="overflow: hidden; touch-action: pan-y;">
+<!--[if lte IE 9]><div id="outdated-browser">You are using an outdated web browser. For a list of supported browsers, please reference the Oracle Application Express Installation Guide.</div><![endif]-->
+<noscript>You must run this product with JavaScript enabled.</noscript>
+<form action="wwv_flow.accept" method="post" name="wwv_flow" id="wwvFlowForm" data-oj-binding-provider="none" novalidate="" class="resize" style="display: block; height: 626px; width: 1366px;">
+<input type="hidden" name="p_flow_id" value="4500" id="pFlowId"><input type="hidden" name="p_flow_step_id" value="1003" id="pFlowStepId"><input type="hidden" name="p_instance" value="14737281957379" id="pInstance"><input type="hidden" name="p_page_submission_id" value="48621251002107112453512442191801832010" id="pPageSubmissionId"><input type="hidden" name="p_request" value="" id="pRequest"><input type="hidden" name="p_reload_on_submit" value="A" id="pReloadOnSubmit"><input type="hidden" value="48621251002107112453512442191801832010" id="pSalt"><script type="text/javascript"> 
+g_Running="SQL Statement Running";
+</script>
+<input type="hidden" id="P1003_POPUP" name="P1003_POPUP" value="0"><input type="hidden" id="P1003_SQL_COMMAND2" name="P1003_SQL_COMMAND2" value=""><input type="hidden" id="P1003_QUERY_ID" name="P1003_QUERY_ID" value=""><input type="hidden" id="P1003_DESC_OBJ" name="P1003_DESC_OBJ" value=""><input type="hidden" id="P1003_RETURN_INTO" name="P1003_RETURN_INTO" value=""><input type="hidden" id="P1003_JOBID" name="P1003_JOBID" value=""><div id="R386906063356677524" class="a-Header apex-sql-workshop"><div id="R386906446198682887" class="a-Header-col a-Header-col--left"><div id="R386906842726682887" class=""><a href="https://apex.oracle.com/pls/apex/f?p=4500:1000:14737281957379::NO::::" class="a-Header-logo" title="Oracle APEX Home"><span class="a-Header-apexLogo"><span class="u-VisuallyHidden">Oracle APEX Home</span></span></a>
+</div><div id="a_Header_menu" class="a-Header-tabsContainer a-MenuBar a-MenuBar--tabs" style="" role="menubar"><ul role="none"><li id="a_Header_menu_0" class="a-MenuBar-item a-Menu--split tab-app-builder"><a role="menuitem" class="a-MenuBar-label" id="a_Header_menu_0i" href="https://apex.oracle.com/pls/apex/f?p=4000:1500:14737281957379::::P1500_SHOW:" tabindex="-1" aria-haspopup="menu" aria-expanded="false">App Builder</a><span class="a-Menu-subMenuCol"><span class="a-Icon icon-menu-split-drop-down"></span></span><div id="a_Header_menu_0m" class="a-Menu a-Menu--top" role="menu" style="display:none;"></div></li><li id="a_Header_menu_1" class="a-MenuBar-item a-Menu--split a-Menu--current tab-sql-workshop"><a role="menuitem" class="a-MenuBar-label" id="a_Header_menu_1i" href="https://apex.oracle.com/pls/apex/f?p=4500:3002:14737281957379:::::" aria-haspopup="menu" aria-expanded="false">SQL Workshop <span class="u-vh">current</span></a><span class="a-Menu-subMenuCol"><span class="a-Icon icon-menu-split-drop-down"></span></span><div id="a_Header_menu_1m" class="a-Menu a-Menu--top" role="menu" style="display:none;"></div></li><li id="a_Header_menu_2" class="a-MenuBar-item a-Menu--split tab-team-dev"><a role="menuitem" class="a-MenuBar-label" id="a_Header_menu_2i" href="https://apex.oracle.com/pls/apex/f?p=4600:1:14737281957379:::RP::" tabindex="-1" aria-haspopup="menu" aria-expanded="false">Team Development</a><span class="a-Menu-subMenuCol"><span class="a-Icon icon-menu-split-drop-down"></span></span><div id="a_Header_menu_2m" class="a-Menu a-Menu--top" role="menu" style="display:none;"></div></li><li id="a_Header_menu_3" class="a-MenuBar-item a-Menu--split tab-apps"><a role="menuitem" class="a-MenuBar-label" id="a_Header_menu_3i" href="https://apex.oracle.com/pls/apex/f?p=4750:50:14737281957379:::::" tabindex="-1" aria-haspopup="menu" aria-expanded="false">App Gallery</a><span class="a-Menu-subMenuCol"><span class="a-Icon icon-menu-split-drop-down"></span></span><div id="a_Header_menu_3m" class="a-Menu a-Menu--top" role="menu" style="display:none;"></div></li></ul></div></div><div id="R386906639708682887" class="a-Header-col a-Header-col--right"><div id="R385807144565239746" class="a-Header-navLinks"><div id="adminMenu" class=""></div><div id="helpMenu" class=""></div><button class="a-Button a-Button--noLabel a-Button--withIcon js-actionButton a-Button--noUI a-Button--navLink" onclick="void(0);" aria-label="Spotlight Search (Ctrl+Quote)" type="button" id="header-spotlightSearch" title="Spotlight Search (Ctrl+Quote)" data-action="spotlight-search"><span class="a-Icon icon-search" aria-hidden="true"></span></button><button class="a-Button a-Button--noLabel a-Button--iconTextButton js-menuButton a-Button--noUI a-Button--navLink" onclick="void(0);" type="button" title="Administration" aria-label="Administration" id="header-adminMenu" data-menu="adminMenu_menu" aria-haspopup="menu" aria-expanded="false"><span class="a-Icon icon-gears-alt" aria-hidden="true"></span><span class="a-Icon icon-menu-drop-down" aria-hidden="true"></span></button><button class="a-Button a-Button--noLabel a-Button--iconTextButton js-menuButton a-Button--noUI a-Button--navLink" onclick="void(0);" type="button" title="Help" aria-label="Help" id="header-helpMenu" data-menu="helpMenu_menu" aria-haspopup="menu" aria-expanded="false"><span class="a-Icon icon-help" aria-hidden="true"></span><span class="a-Icon icon-menu-drop-down" aria-hidden="true"></span></button></div><div id="R385816859034290012" class="a-Header-account"><button class="a-Button a-Button--noLabel a-Button--iconTextButton a-Button--noUI a-Button--navLink js-menuButton a-Button--accountMenu" type="button" title="Account Menu" data-menu="accountMenu_menu" id="header-accountMenu" aria-haspopup="menu" aria-expanded="false"><span class="a-User a-User--md"><span class="a-User-initials u-color-23" role="presentation" aria-hidden="true" title="Veljko Todorovic">VT</span><span class="a-User-name">Veljko Todorovic</span></span><span class="a-Icon icon-menu-drop-down"></span>
+</button>
+
+</div></div></div><div id="R387929033434561917" class="a-ControlBar apex-sql-workshop"><div id="R387929284740561918" class="a-ControlBar-col a-ControlBar-col--noPadding"><ul class="a-Breadcrumb"><li class="a-Breadcrumb-item"><a href="https://apex.oracle.com/pls/apex/f?p=4500:3002:14737281957379:::::" class="a-Breadcrumb-label"><span class="u-VisuallyHidden">SQL Workshop</span><span class="a-Icon icon-breadcrumb-previous" title="SQL Workshop"></span></a></li><li class="a-Breadcrumb-item a-Breadcrumb-item is-active"><span class="a-Breadcrumb-label">SQL Commands</span></li></ul></div><div id="R387929403973561918" class="a-ControlBar-col"><div id="apex-control-icons" class="a-Form a-Form--small a-Form--schemaSelect"><div class="a-Form-fieldContainer  apex-item-wrapper apex-item-wrapper--select-list " id="P1003_SCHEMA_CONTAINER"><div class="a-Form-labelContainer">
+<label for="P1003_SCHEMA" id="P1003_SCHEMA_LABEL" class="a-Form-label">Schema</label>
+</div><div class="a-Form-inputContainer"><select id="P1003_SCHEMA" name="P1003_SCHEMA" class="a-Form-select" onchange="sc_SetSchemaOnly()" size="1"><option value="WKSP_ZUU" selected="selected">WKSP_ZUU</option>
+</select><button class="a-Button a-Button--noUI a-Button--helpButton js-itemHelp" data-itemhelp="11765804246007547" title="Help Text: Schema" aria-label="Help Text: Schema" tabindex="-1" type="button"><span class="a-Icon icon-help" aria-hidden="true"></span></button><span id="P1003_SCHEMA_error_placeholder" class="a-Form-error" data-template-id="488671029226029669_ET"></span></div></div></div></div></div>
+
+
+<span id="APEX_SUCCESS_MESSAGE" data-template-id="690783685471803190_S" class="apex-page-success u-hidden"></span><span id="APEX_ERROR_MESSAGE" data-template-id="690783685471803190_E" class="apex-page-error u-hidden"></span>
+
+
+  <div class="a-Body resize" style="display: block; height: 485px; width: 1366px;">
+    <main class="a-Main resize" style="display: block; height: 485px; width: 1366px;">
+        <div id="R11140505307196687" class=""><input type="hidden" id="OB_OBJECT_NAME" name="OB_OBJECT_NAME" value=""><input type="hidden" id="P0_PPRTIMESTAMP" name="P0_PPRTIMESTAMP" value=""></div><div id="SqlAndResults" class="a-Splitter resize" style="height: 485px; width: 1366px; position: relative;" 400px;"=""><div id="R1157686476230338225" class="resize" style="position: absolute; width: 1366px; height: 204px; top: 0px;"><div class="a-ButtonRegion a-ButtonRegion--wizard a-ButtonRegion--withItems a-ButtonRegion--slimPadding a-ButtonRegion--noBorder" id="scRightHeader">
+  <div class="a-ButtonRegion-wrap">
+    <div class="a-ButtonRegion-col a-ButtonRegion-col--left"><div class="a-ButtonRegion-buttons"></div></div>
+    <div class="a-ButtonRegion-col a-ButtonRegion-col--content">
+      <h2 class="a-ButtonRegion-title">Top Header</h2>
+      <div class="apex-grid-container">
+<div class="apex-row">
+<div class="apex-col apex-col-3 ">
+<div class="a-Form-fieldContainer  apex-item-wrapper plugin-com.oracle.apex.code-language " id="P1003_CMD_LANGUAGE_CONTAINER"><div class="a-Form-labelContainer">
+<label for="P1003_CMD_LANGUAGE" id="P1003_CMD_LANGUAGE_LABEL" class="a-Form-label">Language</label>
+</div><div class="a-Form-inputContainer"><div class="a-Form-itemWrapper">
+<select name="P1003_CMD_LANGUAGE" size="1" id="P1003_CMD_LANGUAGE" class="a-Form-select a-Form-select--conditions">
+<option selected="selected" value="SQL">SQL</option>
+<option value="PLSQL">PL/SQL</option>
+</select>
+</div>
+<button class="a-Button a-Button--noUI a-Button--helpButton js-itemHelp" data-itemhelp="1928693836020541" title="Help Text: Language" aria-label="Help Text: Language" tabindex="-1" type="button"><span class="a-Icon icon-help" aria-hidden="true"></span></button><span id="P1003_CMD_LANGUAGE_error_placeholder" class="a-Form-error" data-template-id="488671029226029669_ET"></span></div></div>
+</div><div class="apex-col apex-col-3 ">
+<div class="a-Form-fieldContainer  apex-item-wrapper apex-item-wrapper--select-list " id="P1003_ROWS_CONTAINER"><div class="a-Form-labelContainer">
+<label for="P1003_ROWS" id="P1003_ROWS_LABEL" class="a-Form-label">Rows</label>
+</div><div class="a-Form-inputContainer"><select id="P1003_ROWS" name="P1003_ROWS" class="selectlist apex-item-select" size="1"><option value="10" selected="selected">10</option>
+<option value="15">15</option>
+<option value="20">20</option>
+<option value="30">30</option>
+<option value="50">50</option>
+<option value="100">100</option>
+<option value="200">200</option>
+<option value="500">500</option>
+<option value="1000">1000</option>
+<option value="5000">5000</option>
+<option value="10000">10000</option>
+<option value="100000">100000</option>
+</select><button class="a-Button a-Button--noUI a-Button--helpButton js-itemHelp" data-itemhelp="138940226594571588" title="Help Text: Rows" aria-label="Help Text: Rows" tabindex="-1" type="button"><span class="a-Icon icon-help" aria-hidden="true"></span></button><span id="P1003_ROWS_error_placeholder" class="a-Form-error" data-template-id="488671029226029669_ET"></span></div></div>
+</div><div class="apex-col apex-col-3 ">
+<span id="P1003_ERASE_ICON" class="display_only apex-item-display-only"><a href="javascript:setValue('P1003_SQL_COMMAND1','');$x('P1003_SQL_COMMAND1').focus();" class="a-Button a-Button--small">Clear Command</a></span>
+</div><div class="apex-col apex-col-3 ">
+<span id="P1003_FIND_ICON" class="display_only apex-item-display-only"><a href="javascript:popupURL('f?p=4500:24:14737281957379:SC::24:P24_STATE:SC:');" class="a-Button a-Button--small a-Button--padLeft">Find Tables</a></span><input type="hidden" id="P1003_LANGUAGE" name="P1003_LANGUAGE" value="en"><input type="hidden" data-for="P1003_LANGUAGE" value="hBCvc9a-ohMwYyJbO8Yhp_XCPTOPOIxZ6ywx7qISfkXSqvbBNhKnWx9TRM-mh9RkPoWwecBfGbt4ZBTWlRrP-A">
+</div>
+</div>
+</div>
+      <div class="a-ButtonRegion-buttons"></div>
+    </div>
+    <div class="a-ButtonRegion-col a-ButtonRegion-col--right"><div class="a-ButtonRegion-buttons"><button onclick="void(0);" class="a-Button " type="button" id="B10646217569354338">Save</button><button onclick="void(0);" class="a-Button a-Button--hot " type="button" id="B10644629905348428">Run</button></div></div>
+  </div>
+</div><div id="scCommandHolder" class="a-Form--slimPadding resize d1" style="height: 156px; width: 1366px;"><div class="a-Form-fieldContainer resize apex-item-wrapper plugin-com.oracle.apex.code-editor " id="P1003_SQL_COMMAND1_CONTAINER" style="display: block; height: 156px; width: 1366px;"><div class="a-Form-labelContainer a-Form-labelContainer--visuallyhidden">
+<label for="P1003_SQL_COMMAND1" id="P1003_SQL_COMMAND1_LABEL" class="a-Form-label visuallyhidden">SQL Command</label>
+</div><div class="a-Form-inputContainer"><div id="P1003_SQL_COMMAND1_widget" style="height: 100%;" class="a-MonacoEditor is-active"><textarea name="P1003_SQL_COMMAND1" rows="5" cols="30" maxlength="32767" id="P1003_SQL_COMMAND1" class="a-Form-textarea--code" style="display: none;"></textarea><div class="a-MonacoEditorContent"><div class="a-MonacoEditor-toolbar a-Toolbar a-Toolbar--simple" role="toolbar" aria-label="Toolbar"><div class="a-Toolbar-groupContainer a-Toolbar-groupContainer--start"><div class="a-Toolbar-group a-Toolbar-group--together"><button type="button" class="a-Button a-Toolbar-item js-actionButton a-Button--withIcon a-Button--noLabel" title="Undo" aria-label="Undo" data-action="undo" data-no-update="true"><span class="a-Icon icon-undo"></span></button><button type="button" class="a-Button a-Toolbar-item js-actionButton a-Button--withIcon a-Button--noLabel" title="Redo" aria-label="Redo" data-action="redo" data-no-update="true" disabled="disabled"><span class="a-Icon icon-redo"></span></button></div><div class="a-Toolbar-group a-Toolbar-group--together"><button type="button" class="a-Button a-Toolbar-item js-actionButton a-Button--withIcon a-Button--noLabel" title="Find" aria-label="Find" data-action="find" data-no-update="true"><span class="a-Icon icon-cm-find"></span></button></div><div class="a-Toolbar-group a-Toolbar-group--together"><button type="button" class="a-Button a-Toolbar-item js-actionButton a-Button--withIcon a-Button--noLabel" title="Query Builder" aria-label="Query Builder" data-action="query-builder" data-no-update="true"><span class="a-Icon icon-cm-query-builder"></span></button><button type="button" class="a-Button a-Toolbar-item js-actionButton a-Button--withIcon a-Button--noLabel" title="Auto Complete - Ctrl+Space" aria-label="Auto Complete - Ctrl+Space" data-action="code-complete" data-no-update="true"><span class="a-Icon icon-cm-autocomplete"></span></button></div></div><div class="a-Toolbar-groupContainer a-Toolbar-groupContainer--end"><div class="a-Toolbar-group"><button type="button" class="a-Button a-Toolbar-item js-menuButton a-Button--withIcon a-Button--noLabel" id="tb_m1" title="Settings" aria-label="Settings" data-menu="tb_m1_menu" aria-haspopup="true" aria-expanded="false"><span class="a-Icon icon-gear"></span><span class="a-Icon icon-menu-drop-down"></span></button></div></div></div><div class="a-MonacoEditor-notification" style="display:none;"><div class="a-MonacoEditor-message"></div><button id="P1003_SQL_COMMAND1_widget_mClose" title="Close" aria-label="Close" class="a-Button a-Button--noLabel a-Button--withIcon a-Button--small a-CodeEditor-searchBar-closeButton" type="button"><span class="a-Icon ui-icon-closethick" aria-hidden="true"></span></button></div><div class="a-MonacoEditor-editor" data-keybinding-context="1" data-mode-id="sql"><div class="monaco-editor no-user-select  showUnused vs-dark focused" style="width: 1364px; height: 113px;" data-uri="inmemory://model/1"><div data-mprt="3" class="overflow-guard" style="width: 1364px; height: 113px;"><div class="margin" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; height: 113px; width: 58px;" role="presentation" aria-hidden="true"><div class="glyph-margin" style="left: 0px; width: 0px; height: 113px;"></div><div class="margin-view-zones" style="position: absolute;" role="presentation" aria-hidden="true"></div><div class="margin-view-overlays focused" style="position: absolute; width: 58px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; line-height: 19px; letter-spacing: 0px; height: 151px;" role="presentation" aria-hidden="true"><div style="position:absolute;top:0px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:32px;">1</div></div><div style="position:absolute;top:19px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:32px;">2</div></div><div style="position:absolute;top:38px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:32px;">3</div></div></div></div><div class="monaco-scrollable-element editor-scrollable vs-dark" role="presentation" style="position: absolute; overflow: hidden; left: 58px; width: 1306px; height: 113px;" data-mprt="5"><div class="lines-content monaco-editor-background" style="position: absolute; overflow: hidden; width: 1000000px; height: 1000000px; touch-action: none; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; left: 0px;"><div class="view-overlays focused" style="position: absolute; height: 0px; width: 1306px;" role="presentation" aria-hidden="true"><div style="position:absolute;top:0px;width:100%;height:19px;"><div class="cslr selected-text top-left-radius top-right-radius bottom-right-radius" style="top:0px;left:0px;width:528px;height:19px;"></div></div><div style="position:absolute;top:19px;width:100%;height:19px;"><div class="cslr selected-text" style="top:0px;left:168px;width:10px;height:19px;"></div><div class="cslr monaco-editor-background top-left-radius" style="top:0px;left:168px;width:10px;height:19px;"></div><div class="cslr selected-text bottom-right-radius" style="top:0px;left:0px;width:168px;height:19px;"></div></div><div style="position:absolute;top:38px;width:100%;height:19px;"><div class="cslr selected-text bottom-left-radius top-right-radius bottom-right-radius" style="top:0px;left:0px;width:0px;height:19px;"></div></div></div><div role="presentation" aria-hidden="true" class="view-rulers"></div><div class="view-zones" style="position: absolute;" role="presentation" aria-hidden="true"></div><div class="view-lines" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; line-height: 19px; letter-spacing: 0px; width: 1306px; height: 151px;" role="presentation" aria-hidden="true" data-mprt="7"><div style="top:0px;height:19px;" class="view-line"><span><span class="mtk15">SELECT</span><span class="mtk1">&nbsp;department</span><span class="mtk10">,</span><span class="mtk1">&nbsp;</span><span class="mtk12">MIN</span><span class="mtk10">(</span><span class="mtk1">salary</span><span class="mtk10">)</span><span class="mtk1">&nbsp;</span><span class="mtk15">AS</span><span class="mtk1">&nbsp;"Lowest&nbsp;salary"&nbsp;</span><span class="mtk15">FROM</span><span class="mtk1">&nbsp;employees&nbsp;</span></span></div><div style="top:19px;height:19px;" class="view-line"><span><span class="mtk15">GROUP</span><span class="mtk1">&nbsp;</span><span class="mtk15">BY</span><span class="mtk1">&nbsp;department</span><span class="mtk10">;</span></span></div><div style="top:38px;height:19px;" class="view-line"><span><span>&nbsp;</span></span></div></div><div data-mprt="1" class="contentWidgets" style="position: absolute; top: 0px;"></div><div role="presentation" aria-hidden="true" class="cursors-layer has-selection cursor-line-style cursor-solid"><div class="cursor " style="height: 19px; top: 38px; left: 0px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; line-height: 19px; letter-spacing: 0px; display: block; visibility: hidden; width: 2px;"></div></div></div><div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute; width: 1292px; height: 10px; left: 0px; bottom: 0px;"><div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 1292px;"></div></div><canvas class="decorationsOverviewRuler" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 113px;" aria-hidden="true" width="14" height="113"></canvas><div role="presentation" aria-hidden="true" class="invisible scrollbar vertical fade" style="position: absolute; width: 14px; height: 113px; right: 0px; top: 0px;"><div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 84px;"></div></div></div><div role="presentation" aria-hidden="true" style="width: 1364px;"></div><textarea data-mprt="6" class="inputarea" autocorrect="off" autocapitalize="none" autocomplete="off" spellcheck="false" aria-label="SQL Command;Press Alt+F1 for Accessibility Options." role="textbox" aria-multiline="true" aria-haspopup="false" aria-autocomplete="both" style="font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; line-height: 19px; letter-spacing: 0px; top: 38px; left: 58px; width: 0px; height: 0px;" wrap="off">SELECT department, MIN(salary) AS "Lowest salary" FROM employees 
+GROUP BY department;
+</textarea><div style="position: absolute; top: 0px; left: 0px; width: 0px; height: 0px;"></div><div data-mprt="4" class="overlayWidgets" style="width: 1364px;"><div class="accessibilityHelpWidget" style="display: none; position: absolute;" role="dialog" aria-hidden="true" widgetid="editor.contrib.accessibilityHelpWidget"><div role="document"></div></div><div class="monaco-editor-hover hidden" aria-hidden="true" role="presentation" style="position: absolute;" widgetid="editor.contrib.modesGlyphHoverWidget"></div></div><div data-mprt="8" class="minimap slider-mouseover" style="position: absolute; left: 0px; width: 0px; height: 113px;" role="presentation" aria-hidden="true"><div class="minimap-shadow-hidden" style="height: 113px;"></div><canvas style="position: absolute; left: 0px; width: 0px; height: 113px;" width="0" height="113"></canvas><canvas style="position: absolute; left: 0px; width: 0px; height: 113px;" class="minimap-decorations-layer" width="0" height="113"></canvas><div style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; width: 0px;" class="minimap-slider"><div style="position: absolute; width: 0px; height: 0px;" class="minimap-slider-horizontal"></div></div></div></div><div data-mprt="2" class="overflowingContentWidgets"><div class="monaco-editor rename-box" style="background-color: rgb(37, 37, 38); box-shadow: rgb(0, 0, 0) 0px 2px 8px; color: rgb(204, 204, 204); position: fixed; visibility: hidden; max-width: 1366px;" widgetid="__renameInputWidget"><input class="rename-input" type="text" aria-label="Rename input. Type new name and press Enter to commit." style="font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; background-color: rgb(60, 60, 60); border-width: 0px; border-style: none;"><div class="rename-label" style="font-size: 11.2px;">Enter to Rename, Shift+Enter to Preview</div></div><div class="editor-widget suggest-widget" style="position: fixed; visibility: inherit; max-width: 1366px; top: 217px; left: 59px;" widgetid="editor.widget.suggestWidget" monaco-visible-content-widget="true"><div class="message" style="display: none; background-color: rgb(37, 37, 38); border-color: rgb(69, 69, 69);" aria-hidden="true"></div><div class="tree" style="display: none; background-color: rgb(37, 37, 38); border-color: rgb(69, 69, 69);" aria-hidden="true"><div class="monaco-list list_id_1" tabindex="0" role="tree"><div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;"><div class="monaco-list-rows" style="transform: translate3d(0px, 0px, 0px); overflow: hidden;"></div><div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute;"><div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px; transform: translate3d(0px, 0px, 0px); contain: strict;"></div></div><div role="presentation" aria-hidden="true" class="invisible scrollbar vertical" style="position: absolute;"><div class="slider" style="position: absolute; top: 0px; left: 0px; width: 10px; transform: translate3d(0px, 0px, 0px); contain: strict;"></div></div></div><style type="text/css" media="screen">.monaco-list.list_id_1:focus .monaco-list-row.focused { background-color: #062f4a; }
+.monaco-list.list_id_1:focus .monaco-list-row.focused:hover { background-color: #062f4a; }
+.monaco-list.list_id_1:focus .monaco-list-row.selected { background-color: #084066; }
+.monaco-list.list_id_1:focus .monaco-list-row.selected:hover { background-color: #084066; }
+.monaco-list.list_id_1:focus .monaco-list-row.selected { color: #ffffff; }
+
+				.monaco-drag-image,
+				.monaco-list.list_id_1:focus .monaco-list-row.selected.focused { background-color: #094771; }
+			
+
+				.monaco-drag-image,
+				.monaco-list.list_id_1:focus .monaco-list-row.selected.focused { color: #ffffff; }
+			
+.monaco-list.list_id_1 .monaco-list-row.focused { background-color:  #062f4a; }
+.monaco-list.list_id_1 .monaco-list-row.focused:hover { background-color:  #062f4a; }
+.monaco-list.list_id_1 .monaco-list-row.selected { background-color:  #37373d; }
+.monaco-list.list_id_1 .monaco-list-row.selected:hover { background-color:  #37373d; }
+.monaco-list.list_id_1:not(.drop-target) .monaco-list-row:hover:not(.selected):not(.focused) { background-color:  #2a2d2e; }
+
+				.monaco-list.list_id_1.drop-target,
+				.monaco-list.list_id_1 .monaco-list-rows.drop-target,
+				.monaco-list.list_id_1 .monaco-list-row.drop-target { background-color: #062f4a !important; color: inherit !important; }
+			
+.monaco-list-type-filter { background-color: #653723 }
+.monaco-list-type-filter { border: 1px solid rgba(0, 0, 0, 0); }
+.monaco-list-type-filter.no-matches { border: 1px solid #be1100; }
+.monaco-list-type-filter { box-shadow: 1px 1px 1px #000000; }</style></div></div><div class="suggest-status-bar" style="display: none; background-color: rgb(37, 37, 38); border-color: rgb(69, 69, 69);" aria-hidden="true"><span></span><span></span></div><div class="details" style="font-size: 14px; font-weight: normal; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; display: none; background-color: rgb(37, 37, 38); border-color: rgb(69, 69, 69);" aria-hidden="true"><div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;"><div class="body" style="overflow: hidden;"><div class="header"><span class="codicon codicon-close" title="Read less...Ctrl+Space" style="height: 19px; width: 19px;"></span><p class="type" style="font-family: Consolas, &quot;Courier New&quot;, monospace;"></p></div><p class="docs"></p></div><div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute;"><div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px; transform: translate3d(0px, 0px, 0px); contain: strict;"></div></div><div role="presentation" aria-hidden="true" class="invisible scrollbar vertical" style="position: absolute;"><div class="slider" style="position: absolute; top: 0px; left: 0px; width: 10px; transform: translate3d(0px, 0px, 0px); contain: strict;"></div></div><div class="shadow"></div><div class="shadow"></div><div class="shadow top-left-corner"></div></div></div></div><div class="monaco-editor-hover hidden" tabindex="0" style="position: fixed; visibility: hidden; max-width: 1366px;" widgetid="editor.contrib.modesContentHoverWidget"><div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;"><div class="monaco-editor-hover-content" style="overflow: hidden; font-size: 14px; line-height: 19px; max-height: 250px; max-width: 900.24px;"></div><div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute;"><div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px; transform: translate3d(0px, 0px, 0px); contain: strict;"></div></div><div role="presentation" aria-hidden="true" class="invisible scrollbar vertical" style="position: absolute;"><div class="slider" style="position: absolute; top: 0px; left: 0px; width: 10px; transform: translate3d(0px, 0px, 0px); contain: strict;"></div></div><div class="shadow"></div><div class="shadow"></div><div class="shadow top-left-corner"></div></div></div></div><div class="context-view" style="display: none;" aria-hidden="true"></div></div></div></div></div><span id="P1003_SQL_COMMAND1_error_placeholder" class="a-Form-error" data-template-id="717397144393801382_ET"></span></div></div><input type="hidden" id="P1003_DICTIONARY_QUERY_ID" name="P1003_DICTIONARY_QUERY_ID" value=""><input type="hidden" data-for="P1003_DICTIONARY_QUERY_ID" value="tacwaiewI_RitHrWl5T8y4YMo5YO9KHa-pBcE30RtDuwVIBRNk0-u2NwZ1rao6AGZldMOWFv_JPpuRXOfHxa7Q"></div></div><div class="a-Splitter-barV a-Splitter--end ui-draggable ui-draggable-handle" title="Bottom Splitter" style="position: absolute; left: 0px; top: 204px; width: 1366px;"><div></div><span role="separator" class="a-Splitter-thumb" tabindex="0" aria-expanded="true" title="Bottom Splitter"></span></div><div id="scBottomHolder" class="resize" aria-live="polite" style="position: absolute; width: 1366px; height: 273px; top: 212px;"><table class="htmldbTabbedNavigationList" summary="" cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+
+<td valign="bottom"><a href="javascript:ob_PPR_TAB('#')" class="tabcurrent" id="result_tab" onclick="html_TabClick(this,'resultsHolder');return false;" title="Results">Results</a></td>
+<td valign="bottom"><a href="javascript:ob_PPR_TAB('#')" id="explain_tab" onclick="sc_getPlan();html_TabClick(this,'explainHolder');return false;" title="Explain">Explain</a></td>
+
+<td valign="bottom"><a href="javascript:ob_PPR_TAB('#')" id="describe_tab" onclick="sc_getDesc();html_TabClick(this,'describeHolder');return false;" title="Describe">Describe</a></td>
+
+<td valign="bottom"><a href="javascript:ob_PPR_TAB('#')" id="savedsql_tab" onclick="sc_getSavedSQL();html_TabClick(this,'SavedSQLHolder');return false;" title="Saved SQL">Saved SQL</a></td>
+
+<td valign="bottom"><a href="javascript:ob_PPR_TAB('#')" id="history_tab" onclick="sc_DisplayHist();html_TabClick(this,'historyHolder');return false;" title="History">History</a></td>
+
+<td width="100%"><br></td></tr></tbody></table><div id="htmlTabHolder" class="resize" style="height: 233px; width: 1366px;"><div id="resultsHolder" class="fielddata"><span class="fielddata">
+Enter SQL statement or PL/SQL command and click Run to see the results.
+</span></div><div id="explainHolder" style="display:none;"></div><div id="describeHolder" style="display:none;"></div>
+
+
+
+
+<script language="JavaScript1.1" type="text/javascript">
+     <!-- Comment out script for old browsers
+ function filter_escape(in_value) {
+                out_value = escape( in_value );
+                return out_value;
+            }
+        function genList0_p_t02_4(filter)
+         {
+         
+pUrl = "wwv_flow_utilities.gen_popup_list";
+pUrl += "?p_filter="  + filter_escape(filter.value);
+pUrl += "&p_name=" + escape('p_t02');
+pUrl += "&p_element_index=" + escape('4');
+pUrl += "&p_form_index=" + escape('0');
+pUrl += "&p_max_elements=" + escape('');
+pUrl += "&p_escape_html=" + escape('');
+pUrl += "&p_ok_to_query=" + escape('YES');
+pUrl += "&p_flow_id=" + escape('4500');
+pUrl += "&p_page_id=" + escape('139');
+pUrl += "&p_session_id=" + escape('14737281957379');
+pUrl += "&p_eval_value=" + escape('');
+pUrl += "&p_translation=" + escape('N');
+pUrl += "&p_lov=" + filter_escape('select owner||\'.\'||object_name d,owner||\'.\'||object_name r  from sys.dba_objects   where object_type = :p139_type   and object_name not like \'BIN%\'   and object_name not like \'DR$%\'   order by 1');
+pUrl += "&p_lov_checksum=11C9E09D7D7595D2A70B20B404698D22";
+cDebug(pUrl)
+           w = open(pUrl,"winLovList","Scrollbars=1,resizable=1,width=400,height=500");
+           if (w.opener == null)
+             w.opener = self;
+           w.focus();
+         }//-->
+     </script><div id="historyHolder" style="display:none;"></div><div id="SavedSQLHolder" style="display:none;"></div><div id="sql-schema-select"></div></div></div></div>
+    </main>
+  </div>
+<footer class="a-Footer">
+  <div class="a-Footer-info">
+    <span class="a-Footer-attribute">
+      <span class="a-Icon icon-user" title="User"></span>
+      <span class="u-VisuallyHidden">User</span>
+      VELJKO.UE.TODOROVIC@GMAIL.COM
+    </span>
+    <span class="a-Footer-attribute">
+      <span class="a-Icon icon-workspace" title="Workspace"></span>
+      <span class="u-VisuallyHidden">Workspace</span>
+      ZUU
+    </span>
+    <span class="a-Footer-attribute">
+      <span class="a-Icon icon-language" title="Language"></span>
+      en
+    </span>
+  </div>
+  <div class="a-Footer-copyright">Copyright © 1999, 2020, Oracle and/or its affiliates. All rights reserved.</div>
+  <div class="a-Footer-version">Application Express 20.2.0.00.20</div>
+</footer>
+<input type="hidden" id="pPageFormRegionChecksums" value="[]">
+<input type="hidden" id="pPageItemsRowVersion" value=""><input type="hidden" id="pPageItemsProtected" value="UDEwMDNfTEFOR1VBR0U6UDEwMDNfRElDVElPTkFSWV9RVUVSWV9JRA/3_9LruxEIxkP7Ziuk8J_ifFLaIL3bBQKuLS1u5TrioZxGhuyewF0-GKBVkShI0gATBpSgIesIaCY8VYYrgrd1Q"><div style="display: none; position: fixed;" tabindex="-1" role="dialog" class="ui-dialog ui-corner-all ui-widget ui-widget-content ui-front ui-dialog--inline ui-draggable ui-resizable" aria-describedby="saveDialog" aria-labelledby="ui-id-1"><div class="ui-dialog-titlebar ui-corner-all ui-widget-header ui-helper-clearfix ui-draggable-handle"><span id="ui-id-1" class="ui-dialog-title">Save SQL</span><button type="button" class="ui-button ui-corner-all ui-widget ui-button-icon-only ui-dialog-titlebar-close" title="Close"><span class="ui-button-icon ui-icon ui-icon-closethick"></span><span class="ui-button-icon-space"> </span>Close</button></div><div id="saveDialog" class="a-DialogRegion js-regionDialog js-draggable js-modal js-resizable js-dialog-size480x320 ui-dialog-content ui-widget-content" style="">
+  <div class="a-DialogRegion-body">
+<div class="a-Form-fieldContainer  apex-item-wrapper apex-item-wrapper--text-field " id="P1003_SAVE_NAME_CONTAINER"><div class="a-Form-labelContainer">
+  <span class="a-Form-required"><span class="a-Icon icon-asterisk"></span></span><label for="P1003_SAVE_NAME" id="P1003_SAVE_NAME_LABEL" class="a-Form-label">Name <span class="u-VisuallyHidden">(Value Required)</span></label>
+</div><div class="a-Form-inputContainer"><input type="text" id="P1003_SAVE_NAME" name="P1003_SAVE_NAME" class="text_field apex-item-text" size="30" maxlength="2000" data-trim-spaces="NONE"><button class="a-Button a-Button--noUI a-Button--helpButton js-itemHelp" data-itemhelp="6470812902902555" title="Help Text: Name" aria-label="Help Text: Name" tabindex="-1" type="button"><span class="a-Icon icon-help" aria-hidden="true"></span></button><span id="P1003_SAVE_NAME_error_placeholder" class="a-Form-error" data-template-id="488671190365029680_ET"></span></div></div><div class="a-Form-fieldContainer  apex-item-wrapper apex-item-wrapper--textarea " id="P1003_SAVE_DESC_CONTAINER"><div class="a-Form-labelContainer">
+<label for="P1003_SAVE_DESC" id="P1003_SAVE_DESC_LABEL" class="a-Form-label">Description</label>
+</div><div class="a-Form-inputContainer"><div class="apex-item-group apex-item-group--textarea"><textarea name="P1003_SAVE_DESC" rows="4" cols="30" maxlength="32767" id="P1003_SAVE_DESC" class="textarea apex-item-textarea" data-trim-spaces="NONE" data-resizable="true" style="resize: both;"></textarea></div><button class="a-Button a-Button--noUI a-Button--helpButton js-itemHelp" data-itemhelp="6471725716906222" title="Help Text: Description" aria-label="Help Text: Description" tabindex="-1" type="button"><span class="a-Icon icon-help" aria-hidden="true"></span></button><span id="P1003_SAVE_DESC_error_placeholder" class="a-Form-error" data-template-id="488671029226029669_ET"></span></div></div>
+  </div>
+  <div class="a-DialogRegion-buttons">
+     <div class="a-ButtonRegion a-ButtonRegion--dialogRegion">
+       <div class="a-ButtonRegion-wrap">
+         <div class="a-ButtonRegion-col a-ButtonRegion-col--left"><div class="a-ButtonRegion-buttons"></div></div>
+         <div class="a-ButtonRegion-col a-ButtonRegion-col--right"><div class="a-ButtonRegion-buttons"><button onclick="void(0);" class="a-Button " type="button" id="B6472826193915838">Cancel</button><button onclick="void(0);" class="a-Button a-Button--hot " type="button" id="B6474106585919640">Save</button></div></div>
+       </div>
+     </div>
+  </div>
+</div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div></div></form>
+
+<script type="text/javascript">
+apex.da.initDaEventList = function(){
+apex.da.gEventList = [
+{"triggeringElementType":"JAVASCRIPT_EXPRESSION","triggeringElement": function() {
+return (window
+); },"bindType":"bind","bindEventType":"unload","anyActionsFireOnInit":true,actionList:[{"eventResult":true,"executeOnPageInit":true,"stopExecutionOnError":true,"affectedElementsType":"EVENT_SOURCE",javascriptFunction:function (){ sc_removeJob();
+},"action":"NATIVE_JAVASCRIPT_CODE"}]},
+{"triggeringElementType":"BUTTON","triggeringButtonId":"B6472826193915838","bindType":"bind","bindEventType":"click","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:function (){ sc_CancelSave();
+},"action":"NATIVE_JAVASCRIPT_CODE"}]},
+{"triggeringElementType":"BUTTON","triggeringButtonId":"B6474106585919640","bindType":"bind","bindEventType":"click","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:function (){ sc_saveSql();
+},"action":"NATIVE_JAVASCRIPT_CODE"}]},
+{"triggeringElementType":"BUTTON","triggeringButtonId":"B10646217569354338","bindType":"bind","bindEventType":"click","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"affectedElementsType":"REGION","affectedRegionId":"saveDialog",javascriptFunction:function() {apex.theme.openRegion(this.affectedElements);},"action":"NATIVE_OPEN_REGION"}]},
+{"triggeringElementType":"BUTTON","triggeringButtonId":"B10644629905348428","bindType":"bind","bindEventType":"click","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:function (){ html_TabClick(html_GetElement('result_tab'),'resultsHolder');
+setTimeout(function() {
+    sc_getResults('14737281957379', true);
+},100);
+
+},"action":"NATIVE_JAVASCRIPT_CODE"}]},
+{"bindEventType":"ready","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:function (){ function execute(){
+    html_TabClick($x('result_tab'), 'resultsHolder');
+    // keeps the UI usable while waiting for results.
+    setTimeout(function () {
+      sc_getResults($v("pInstance"));
+    }, 1);
+}
+
+var isMacLike = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform);
+
+var editor = $('#P1003_SQL_COMMAND1_widget').codeEditor('getEditor');
+
+if( isMacLike ){
+    // special control key on Mac
+    // this won't override Insert Line Below as they are mapped to different keys
+    editor.addCommand(monaco.KeyMod.WinCtrl | monaco.KeyCode.Enter, execute);
+} else {
+    // regular control key for all other OSes
+    // this will override Insert Line Below, which is ok
+    editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.Enter, execute);
+}
+},"action":"NATIVE_JAVASCRIPT_CODE"}]}];
+}
+</script>
+
+
+<script src="SQL%20Commands_files/sc_core.js"></script>
+<script type="text/javascript">
+apex.jQuery(document).ready(function() {
+  apex.jQuery(".a-Body, .a-Main").addClass("resize");  
+  apex.theme.pageResizeInit();
+});
+
+</script>
+
+
+
+
+
+<script src="SQL%20Commands_files/interactiveGrid.js"></script>
+
+<script src="SQL%20Commands_files/require.js"></script>
+<script>
+define("jquery",[],function(){return apex.jQuery});
+define("hammerjs",[],function(){return Hammer});
+</script>
+<script src="SQL%20Commands_files/editor_002.js"></script>
+<script src="SQL%20Commands_files/builder.js"></script>
+<script src="SQL%20Commands_files/widget.js"></script>
+<script type="text/javascript">
+apex.session.initTimeouts(300,{"idle_time_ms":7195999.99999999999999999999999999999999,"life_time_ms":43179000,"max_idle_time_ms":7200000},'f?p=4500:1000::::::');
+apex.jQuery( function() {
+apex.page.init( this, function() {
+(function(){apex.builder.plugin.codeEditor('#P1003_SQL_COMMAND1_widget',{
+"modeBasedOnItem":"P1003_CMD_LANGUAGE"
+,"adjustableHeight":false
+,"validate":false
+,"queryBuilder":true
+,"parsingSchema":"WKSP_ZUU"
+,"readOnly":false
+,"ajaxIdentifier":"SVRFTSBUWVBFfjUxMjB-MTAxMDQwNDY0MjE2MzAzOQ\/Nq2AJbZtxtuLwO7_XaonjHCN0744vUQ7xwwNUBAmNirzjmzaOg3N23QNz0_vv_oAjkduIM-BVfZaFH4qt8ZNHQ"
+,"ariaLabel":"SQL Command"
+}
+);})();
+apex.jQuery.when.apply( apex.jQuery, apex.page.loadingDeferreds ).done(function() {
+try {
+(function(){var e = apex.jQuery("#adminMenu_menu", apex.gPageContext$);
+if (e.hasClass("js-addActions")) {
+  apex.actions.addFromMarkup(e);
+}
+e.menu({ slide: e.hasClass("js-slide")});
+})();
+(function(){var e = apex.jQuery("#helpMenu_menu", apex.gPageContext$);
+if (e.hasClass("js-addActions")) {
+  apex.actions.addFromMarkup(e);
+}
+e.menu({ slide: e.hasClass("js-slide")});
+})();
+(function(){apex.widget.selectList("#P1003_SCHEMA",{"ajaxIdentifier":"SVRFTSBUWVBFfjUxMjB-MTE3NjU4MDQyNDYwMDc1NDc\u002FiJyWv51wmhD3Bdmgq-1HlN-g98AmBSoDe1_DN1KH3dsQ2i30NT2NHycqDRudfhuOAie-SomjF7fq2HTXiXNhWQ"});})();
+(function(){apex.jQuery('#SqlAndResults').splitter(
+{"orientation":"vertical","positionedFrom":"end","noCollapse":true,"iframeFix":false,"collapsed":false,"minSize":100,"realTime":false,"restoreText":"Restore","collapseText":"Collapse","title":"Bottom Splitter",
+change: function(e, ui) {
+apex.server.plugin('UkVHSU9OIFRZUEV-fjExNTc2ODYzODY1ODIzMzgyMjQ\u002FUEupI3mmdpcwms_-Nv6wqhVA195aEIQEH0vMS6Jh-Y-YAKiukUP9WKGXsaq41UV-9m73HeNqcwSPRfZhjKBZ0g', {
+x01: (ui.lastPosition - ui.lastPosition % 1), x02: ui.collapsed}, {
+queue: {action: "lazyWrite", name: "s1157686386582338224"}, dataType: ""} );
+},
+"position":273
+});})();
+(function(){apex.jQuery(document).on("keydown", function(e) {
+if ( e.ctrlKey && e.which === 117 ) {
+if ( apex.jQuery.apex.splitter.nextSplitter( e.shiftKey ) ) {
+e.preventDefault();
+} }  });
+})();
+(function(){apex.widget.selectList("#P1003_ROWS",{"ajaxIdentifier":"SVRFTSBUWVBFfjUxMjB-MTM4OTQwMjI2NTk0NTcxNTg4\u002FegXnn6gC9lga8zpxTdNfJDBquq7o-BTdKlqOnrBNSy5UkhY5sQjbAH1V5ieaaEXNxSUBQ4ilL91E6IJXdh6_zA"});})();
+(function(){apex.da.initDaEventList();})();
+(function(){apex.da.init();})();
+
+sc_PageInit();
+
+$("body").trigger("resize");
+
+var resizeTimeout = 0;
+
+var editorWidget = $("#P1003_SQL_COMMAND1_widget");
+
+editorWidget.css("height", "100%");
+editorWidget.resize();
+
+// resize event is triggered twice
+// adding a timeout for resizing the code editor only once
+$('#scCommandHolder').on('resize', function(){
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(function(){
+        editorWidget.resize();
+    }, 100);
+});
+
+var runButton = $('#scRightHeader .a-Button--hot');
+
+if ( runButton.length ) {
+    runButton.click( function() {
+        apex.item("P1003_SQL_COMMAND1").setFocus();
+    });
+}
+
+} finally {
+apex.event.trigger(apex.gPageContext$,'apexreadyend');
+}
+});
+});
+});</script>
+
+<div id="accountMenu_menu" class="a-Header-accountDialog a-Menu" role="menu" style="display: none;">
+  <div class="a-MediaBlock a-Menu-content">
+    <div class="a-MediaBlock-graphic">
+<span class="a-User a-User--xl"><span class="a-User-initials u-color-23" role="presentation" aria-hidden="true" title="Veljko Todorovic">VT</span></span>      <a href="javascript:apex.navigation.dialog('f?p=4350:3:14737281957379\u0026p_dialog_cs=0D9rLzabf-8JepcFB2gLvJYimCCuYdqzc4fye427WfUDEZvyA5mp6R3tYANFFoqx1mT9OOX22sMRAIbRG6I8OA',{title:'Edit Profile',height:'550',width:'600',maxWidth:'1200',modal:true,dialog:null,resizable:true,minWidth:500,minHeight:400},'a-Dialog--uiDialog',apex.jQuery('#R385816859034290012'));" class="a-Header-accountDialog-editProfile">Edit Profile</a>
+    </div>
+    <div class="a-MediaBlock-content">
+      <div class="a-Menu-label">
+        <span class="a-Header-dialogText a-Header-dialogName">Veljko Todorovic</span>
+        <span class="a-Header-dialogText a-Header-dialogUsername">veljko.ue.todorovic@gmail.com</span></div>
+      <div class="a-Menu-label">
+        <span class="a-Header-dialogLabel">
+Workspace</span><span class="a-Header-dialogValue">ZUU</span></div>      <div class="a-Menu-label">
+<span class="a-Header-dialogLabel">Role</span><span class="a-Header-dialogValue">Administrator</span></div><div class="a-Header-accountDialog-uiModeSwitch" role="group" aria-label="Appearance">
+<button type="button" data-mode="auto" class="is-on js-ui-mode-btn a-Menu-item a-Menu-label" role="menuitem" title="Automatic" aria-label="Automatic" aria-current="true"><span class="uiModeSwitch-icon uiModeSwitch-icon-auto"></span></button><button type="button" data-mode="standard" class="is-off js-ui-mode-btn a-Menu-item a-Menu-label" role="menuitem" title="Light Mode" aria-label="Light Mode" aria-current="false"><span class="uiModeSwitch-icon uiModeSwitch-icon-light"></span></button><button type="button" data-mode="dark" class="is-off js-ui-mode-btn a-Menu-item a-Menu-label" role="menuitem" title="Dark Mode" aria-label="Dark Mode" aria-current="false"><span class="uiModeSwitch-icon uiModeSwitch-icon-dark"></span></button></div>    </div>
+  </div>
+  <div class="a-Header-accountDialog-buttons">
+    <div class="a-Toolbar">
+      <div class="a-Toolbar-items a-Toolbar-items--left">
+        <button type="button" onclick="javascript:apex.navigation.dialog('f?p=4350:102:14737281957379::::F4350_P102_USER_ID:14476988351264857847\u0026p_dialog_cs=7g-H-HU6LRyuo6yop5RAUY6E24b-ct_Iudeg5Aco35yOdNn2L45OMCrgQxOYCs9oFvNyJQyzue5qyMc0Csdcjw',{title:'Preferences',height:'480',width:'720',maxWidth:'1200',modal:true,dialog:null,resizable:true,minWidth:500,minHeight:400},'a-Dialog--uiDialog',apex.jQuery('#R385816859034290012'));" class="a-Button">Preferences</button>
+      </div>
+      <div class="a-Toolbar-items a-Toolbar-items--right">
+        <button type="button" onclick="apex.navigation.redirect('apex_authentication.logout?p_app_id=4500\u0026p_session_id=14737281957379');" class="a-Button">Sign out</button>
+      </div>
+    </div>
+  </div>
+</div><div id="tb_m1_menu" class="a-Toolbar-menu a-Menu" style="display:none;" role="menu"></div><div class="monaco-aria-container"><div class="monaco-alert" role="alert" aria-atomic="true"></div><div class="monaco-status" role="status" aria-atomic="true"></div></div><div id="adminMenu_menu" class="a-Menu" style="display:none;" role="menu"><ul><li data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon=""><a href="https://apex.oracle.com/pls/apex/f?p=4350:1:14737281957379:::::" title="">Administration</a></li>
+<li data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon=""><a href="https://apex.oracle.com/pls/apex/separator" title="">------</a></li>
+<li data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon=""><a href="" title="">Manage Service</a><ul><li data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon=""><a href="https://apex.oracle.com/pls/apex/f?p=4350:21:14737281957379:::::" title="">Manage Service</a></li><li data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon=""><a href="https://apex.oracle.com/pls/apex/separator" title="">------</a></li><li data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon=""><a href="https://apex.oracle.com/pls/apex/f?p=4350:96:14737281957379:::49::" title="">Make a Service Request</a></li><li data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon=""><a href="https://apex.oracle.com/pls/apex/f?p=4350:17:14737281957379:::RP::" title="">Set Workspace Preferences</a></li><li data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon=""><a href="javascript:apex.navigation.dialog('f?p=4350:35:14737281957379\u0026p_dialog_cs=vsv_G6LhmHZxjNBrRLEwOYc7UbBKUatieOIi8VhN-SzKTjTCsF-R8BoFlmKjNCPtTcrZrevDPo6HVKsLebVluQ',{title:'Workspace Message',height:'400',width:'500',maxWidth:'1200',modal:true,dialog:null,resizable:true,minWidth:500,minHeight:400},'a-Dialog--uiDialog',apex.jQuery('#adminMenu_menu'));" title="">Edit Announcement</a></li><li data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon=""><a href="https://apex.oracle.com/pls/apex/f?p=4350:101:14737281957379:::::" title="">Workspace Utilization</a></li></ul></li><li data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon=""><a href="https://apex.oracle.com/pls/apex/f?p=4350:55:14737281957379:::::" title="">Manage Users and Groups</a></li>
+<li data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon=""><a href="https://apex.oracle.com/pls/apex/f?p=4350:22:14737281957379:::::" title="">Monitor Activity</a></li>
+<li data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon=""><a href="https://apex.oracle.com/pls/apex/f?p=4350:33:14737281957379:::::" title="">Dashboards</a></li>
+<li data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon=""><a href="javascript:apex.navigation.dialog('f?p=4350:3:14737281957379:::3\u0026p_dialog_cs=0D9rLzabf-8JepcFB2gLvJYimCCuYdqzc4fye427WfUDEZvyA5mp6R3tYANFFoqx1mT9OOX22sMRAIbRG6I8OA#pwd',{title:'Edit%20Profile',height:'550',width:'600',maxWidth:'1200',modal:true,dialog:null,resizable:true,minWidth:500,minHeight:400},'a-Dialog--uiDialog',apex.jQuery('#adminMenu_menu'));" title="">Change My Password</a></li>
+</ul></div><div id="helpMenu_menu" class="a-Menu" style="display:none;" role="menu"><ul><li data-id="helpLinkNewWindow" data-disabled="" data-hide="" data-shortcut="" data-icon=""><a href="https://apex.oracle.com/doc202/aeutl/using-SQL-commands.html" title="">SQL Commands Documentation</a></li>
+<li data-id="helpLinkDocLib" data-disabled="" data-hide="" data-shortcut="" data-icon=""><a href="https://apex.oracle.com/doc202" title="">Documentation</a></li>
+<li data-id="helpLinkForum" data-disabled="" data-hide="" data-shortcut="" data-icon=""><a href="https://apex.oracle.com/forum" title="">Discussion Forum</a></li>
+<li data-id="helpLinkOTN" data-disabled="" data-hide="" data-shortcut="" data-icon=""><a href="https://apex.oracle.com/" title="">Learn More about Oracle APEX</a></li>
+<li data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon=""><a href="https://apex.oracle.com/pls/apex/separator" title="">---</a></li>
+<li data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon=""><a href="javascript:apex.navigation.dialog('f?p=4350:9:14737281957379\u0026p_dialog_cs=w9d91Sk5z-Aa_SgivxPS02E2CK2WIdekOAt4ozYE-Kjto3udGwUkS6Q9xVu05w8Hj0b1M6KhprJWBY0_vs3C0Q',{title:'About Application Express',height:'500',width:'490',maxWidth:'1200',modal:true,dialog:null,scroll:'auto'},'a-Dialog--uiDialog',apex.jQuery('#helpMenu_menu'));" title="">About</a></li>
+</ul></div></body></html>

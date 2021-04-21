@@ -1,0 +1,95 @@
+html{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#slika{
+    width: 200px;
+    margin: 5px;
+}
+
+#slika1{
+    width: 100%;
+    margin: 25px;
+}
+
+#tabela{
+    width: 80%;
+}
+
+td{
+    text-align: center;
+}
+
+body{
+    background-color: wheat;
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+#header{
+    display: flex;
+    background-color: cadetblue;
+    color:darkgoldenrod;
+    justify-content: center;
+    width: 100%;    
+}
+
+a:link{
+    color:darkgoldenrod;
+}
+
+a:visited{
+    color: yellowgreen;
+}
+
+
+#top{
+    display: flex;
+    width: 100%;
+    background-color: greenyellow;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+#top div{
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    width: 48%;
+}
+
+#mojaforma{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    flex-direction: column;
+    margin: 5px;
+}
+
+#center{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+#footer{
+    display: flex;
+    width: 100%;
+    color: white;
+    background-color: indigo;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

@@ -1,0 +1,35 @@
+<html>
+    <script>
+        x1 = /HTML/;
+        y1 = "html: HTML ili HyperText Markup Language.\
+              HTML se uci na IP1.\
+              HtmL je jednostavan jezik".replace(x1, "JAVA");
+        document.write("Metodom REPLACE promenjen je uzorak HTML u JAVA pa string izgleda ovako: " + y1);
+        document.write("<br>");
+
+        x2 = /HTML/i;
+        y2 = "html: HTML ili HyperText Markup Language.\
+              HTML se uci na IP1.\
+              HtmL je jednostavan jezik".replace(x2, "JAVA");
+        document.write("<br>Upotrebom atribudta i nad uzorkom, string izgleda ovako: " + y2);
+        document.write("<br>");
+
+        x3 = /HTML/g;
+        y3 = "html: HTML ili HyperText Markup Language.\
+              HTML se uci na IP1.\
+              HtmL je jednostavan jezik".replace(x3, "JAVA");
+        document.write("<br>Upotrebom atributa g nad uzorkom, string izgleda ovako: " + y3);
+        document.write("<br>");
+
+        x4 = /HTML/ig;
+        y4 = "html: HTML ili HyperText Markup Language.\
+              HTML se uci na IP1.\
+              HtmL je jednostavan jezik".replace(x4, "JAVA");
+        document.write("<br>Upotrebom atribudta ig nad uzorkom, string izgleda ovako: " + y4);
+        
+    </script>
+
+    <body>
+        
+    </body>
+</html>

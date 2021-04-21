@@ -1,0 +1,32 @@
+<html>
+    <script>
+        function postaviCookie(){
+            document.cookie = document.mojforma.polje.value;
+            alert("Vi koristite: " + window.navigator.appName)
+        }
+        function prikaziCookie(){
+            alert("Cookie je: " + document.cookie);
+        }
+
+        function kreirajDugme(vrednost) {
+            document.write("<input type='button' name='mesec" + vrednost + "' value='" + vrednost + "' onClick='ime(" + vrednost + ");' />");
+        }
+        function generisiDugmice() {
+            var i;for(i = 1; i<= 12; i++) {
+                kreirajDugme(i);
+            }
+        }
+        function ime(obj) {
+            alert(obj);
+        }
+        generisiDugmice();
+    </script>
+<body>
+    <form name="mojforma">
+        <input type="text" name="polje" size="20">
+        <br>
+        <input type="button" value="Postavi cookie" name="dugme1" onclick="postaviCookie()">
+        <input type="button" value="Prikazi cookie" name="dugme2" onclick="prikaziCookie()">
+    </form>
+</body>
+</html>
